@@ -40,6 +40,7 @@ public class ImageToIcon {
 		ImageToIcon.cutIcon(fileName, targetFloat, "Default@2x.png", 640, 960);
 		System.out.println("生成欢迎屏幕图片结束....");
 	}
+	//剪切高度大于宽度的图片
 	public static void cutIconsHeight(String fileName, String targetFloat) throws IOException {
 		
 		ImageToIcon.cutIcon(fileName, targetFloat, "Default-736h@3x.png", 1242, 2208);
