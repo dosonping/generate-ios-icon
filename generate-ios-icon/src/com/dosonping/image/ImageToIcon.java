@@ -14,13 +14,15 @@ public class ImageToIcon {
 		String fileName = "D:\\bmrb\\道桥养护app\\二期\\icon0115.png";
 //		String targetFloat = "D:\\bmrb\\道桥养护app\\二期\\icon\\";
 //		ImageToIcon.scaleIcons(fileName, targetFloat);
-		String targetFloatIconSet = "D:\\bmrb\\道桥养护app\\二期\\icon\\iconset";
-		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
-		String targetFloatImageset = "D:\\bmrb\\道桥养护app\\二期\\icon\\imageset";
-		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+//		String targetFloatIconSet = "D:\\bmrb\\道桥养护app\\二期\\icon\\iconset\\";
+		//ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+//		String targetFloatImageset = "D:\\bmrb\\道桥养护app\\二期\\icon\\imageset\\";
+//		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
 //		String fileName = "D:\\bmrb\\道桥养护app\\二期\\启动图片\\ios\\20481496.png";
 //		String targetFloat = "D:\\bmrb\\道桥养护app\\二期\\splash\\";
 //		ImageToIcon.cutIcons(fileName, targetFloat);
+		String targetFloatAppStore = "D:\\bmrb\\道桥养护app\\二期\\icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);
 		
 	}
 	//剪切所有图标
@@ -112,6 +114,13 @@ public class ImageToIcon {
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon180.png", 180);
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon1024.png", 1024);
 		System.out.println("生成Appiconset图标完成...");
+	}
+	public static void scaleIconsForAppStore(String fileName, String targetFloat) throws IOException {
+		System.out.println("开始生成AppStore图标...");
+		ImageToIcon.generateIcon(fileName, targetFloat, "57.png", 57);
+		ImageToIcon.generateIcon(fileName, targetFloat, "512.png", 512);
+		ImageToIcon.generateIcon(fileName, targetFloat, "logo.png", 571);
+		System.out.println("生成AppStore图标完成...");
 	}
 	
 	//缩放单个图标
