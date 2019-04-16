@@ -11,19 +11,38 @@ import javax.imageio.ImageIO;
 
 public class ImageToIcon {
 	public static void main(String[] args) throws IOException {
-		String fileName = "D:\\bmrb\\道桥养护app\\二期\\icon0115.png";
+		//====================================================
+		//道桥养护app  部分start
+//		String fileName = "D:\\bmrb\\道桥养护app\\二期\\icon0115.png";
 //		String targetFloat = "D:\\bmrb\\道桥养护app\\二期\\icon\\";
 //		ImageToIcon.scaleIcons(fileName, targetFloat);
 //		String targetFloatIconSet = "D:\\bmrb\\道桥养护app\\二期\\icon\\iconset\\";
-		//ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+//		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
 //		String targetFloatImageset = "D:\\bmrb\\道桥养护app\\二期\\icon\\imageset\\";
 //		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
 //		String fileName = "D:\\bmrb\\道桥养护app\\二期\\启动图片\\ios\\20481496.png";
 //		String targetFloat = "D:\\bmrb\\道桥养护app\\二期\\splash\\";
 //		ImageToIcon.cutIcons(fileName, targetFloat);
-		String targetFloatAppStore = "D:\\bmrb\\道桥养护app\\二期\\icon\\appstoreicon\\";
-		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);
+//		String targetFloatAppStore = "D:\\bmrb\\道桥养护app\\二期\\icon\\appstoreicon\\";
+//		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);
+		//道桥养护app  部分end
 		
+		
+		//======================================================================
+		//国道通OAApp部分start
+		String fileName = "D:\\bmrb\\国道通OA_App\\图标\\国道通1024.png";
+		String targetFloat = "D:\\bmrb\\国道通OA_App\\icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = "D:\\bmrb\\国道通OA_App\\icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageset = "D:\\bmrb\\国道通OA_App\\icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+		String targetFloatAppStore = "D:\\bmrb\\国道通OA_App\\icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
+//		String fileName = "D:\\bmrb\\国道通OA_App\\启动图片\\ios\\20481496.png";
+//		String targetFloat = "D:\\bmrb\\国道通OA_App\\splash\\";
+//		ImageToIcon.cutIcons(fileName, targetFloat);
+		//国道通OAApp部分 end
 	}
 	//剪切所有图标
 	public static void cutIcons(String fileName, String targetFloat) throws IOException {
