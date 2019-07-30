@@ -30,19 +30,96 @@ public class ImageToIcon {
 		
 		//======================================================================
 		//国道通OAApp部分start
-		String fileName = "D:\\bmrb\\国道通OA_App\\图标\\国道通1024.png";
-		String targetFloat = "D:\\bmrb\\国道通OA_App\\icon\\";
-		ImageToIcon.scaleIcons(fileName, targetFloat);
-		String targetFloatIconSet = "D:\\bmrb\\国道通OA_App\\icon\\iconset\\";
-		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
-		String targetFloatImageset = "D:\\bmrb\\国道通OA_App\\icon\\imageset\\";
-		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
-		String targetFloatAppStore = "D:\\bmrb\\国道通OA_App\\icon\\appstoreicon\\";
-		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
+//		String fileName = "D:\\bmrb\\国道通OA_App\\图标\\国道通1024.png";
+//		String targetFloat = "D:\\bmrb\\国道通OA_App\\icon\\";
+//		ImageToIcon.scaleIcons(fileName, targetFloat);
+//		String targetFloatIconSet = "D:\\bmrb\\国道通OA_App\\icon\\iconset\\";
+//		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+//		String targetFloatImageset = "D:\\bmrb\\国道通OA_App\\icon\\imageset\\";
+//		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+//		String targetFloatAppStore = "D:\\bmrb\\国道通OA_App\\icon\\appstoreicon\\";
+//		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
 //		String fileName = "D:\\bmrb\\国道通OA_App\\启动图片\\ios\\20481496.png";
 //		String targetFloat = "D:\\bmrb\\国道通OA_App\\splash\\";
 //		ImageToIcon.cutIcons(fileName, targetFloat);
 		//国道通OAApp部分 end
+		
+		//hdApp
+		//generateHdAppIcon();
+		//二部OAApp
+		generateErbuOaAppIcon();
+		//都市绿源OAApp
+		generateDslyOaAppIcon();
+		
+
+	}
+	/**
+	 * 都市绿源OAApp
+	 * @throws IOException
+	 * @datetime 2019年7月30日 下午3:07:15
+	 * @author 崔富平
+	 */
+	private static void generateDslyOaAppIcon() throws IOException{
+		//都市绿源OAApp部分start
+		String rootPath = "D:\\bmrb\\都市绿源OA_App\\";
+		String fileName = rootPath + "icon.png";
+		String targetFloat = rootPath + "icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = rootPath + "icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageset = rootPath + "icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+		String targetFloatAppStore = rootPath + "icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
+//						String fileName = "D:\\bmrb\\国道通OA_App\\启动图片\\ios\\20481496.png";
+//						String targetFloat = "D:\\bmrb\\国道通OA_App\\splash\\";
+//						ImageToIcon.cutIcons(fileName, targetFloat);
+		//都市绿源OAApp部分 end
+	}
+	/**
+	 * 二部OAApp
+	 * @throws IOException
+	 * @datetime 2019年7月30日 下午3:07:30
+	 * @author 崔富平
+	 */
+	private static void generateErbuOaAppIcon() throws IOException{
+		//二部OAApp部分start
+		String rootPath = "D:\\bmrb\\二部OA_App\\";
+		String fileName = rootPath + "icon.png";
+		String targetFloat = rootPath + "icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = rootPath + "icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageset = rootPath + "icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+		String targetFloatAppStore = rootPath + "icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
+//				String fileName = "D:\\bmrb\\国道通OA_App\\启动图片\\ios\\20481496.png";
+//				String targetFloat = "D:\\bmrb\\国道通OA_App\\splash\\";
+//				ImageToIcon.cutIcons(fileName, targetFloat);
+		//二部OAApp部分 end
+	}
+	/**
+	 * hdApp
+	 * @throws IOException
+	 * @datetime 2019年7月29日 下午5:09:44
+	 * @author 崔富平
+	 */
+	private static void generateHdAppIcon() throws IOException {
+		//hdApp部分start
+		String fileName = "D:\\bmrb\\安全隐患排查App\\icon.png";
+		String targetFloat = "D:\\bmrb\\安全隐患排查App\\icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = "D:\\bmrb\\安全隐患排查App\\icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageset = "D:\\bmrb\\安全隐患排查App\\icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+		String targetFloatAppStore = "D:\\bmrb\\安全隐患排查App\\icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);	
+//		String fileName = "D:\\bmrb\\国道通OA_App\\启动图片\\ios\\20481496.png";
+//		String targetFloat = "D:\\bmrb\\国道通OA_App\\splash\\";
+//		ImageToIcon.cutIcons(fileName, targetFloat);
+		//hdApp部分 end
 	}
 	//剪切所有图标
 	public static void cutIcons(String fileName, String targetFloat) throws IOException {
@@ -94,7 +171,7 @@ public class ImageToIcon {
 	//缩放所有图标
 	public static void scaleIcons(String fileName, String targetFloat) throws IOException {
 
-
+		isChartPathExist(targetFloat);
 		System.out.println("开始生成图标...");
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon29.png", 29);
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon40.png", 40);
@@ -116,12 +193,14 @@ public class ImageToIcon {
 		System.out.println("生成图标完成...");
 	}
 	public static void scaleIconsForAppImageset(String fileName, String targetFloat) throws IOException {
+		isChartPathExist(targetFloat);
 		System.out.println("开始生成AppImageset图标...");
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon120.png", 120);
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon180.png", 180);
 		System.out.println("生成AppImageset图标完成...");
 	}
 	public static void scaleIconsForAppiconset(String fileName, String targetFloat) throws IOException {
+		isChartPathExist(targetFloat);
 		System.out.println("开始生成Appiconset图标...");
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon40.png", 40);
 		ImageToIcon.generateIcon(fileName, targetFloat, "icon58.png", 58);
@@ -135,6 +214,7 @@ public class ImageToIcon {
 		System.out.println("生成Appiconset图标完成...");
 	}
 	public static void scaleIconsForAppStore(String fileName, String targetFloat) throws IOException {
+		isChartPathExist(targetFloat);
 		System.out.println("开始生成AppStore图标...");
 		ImageToIcon.generateIcon(fileName, targetFloat, "57.png", 57);
 		ImageToIcon.generateIcon(fileName, targetFloat, "512.png", 512);
@@ -144,6 +224,7 @@ public class ImageToIcon {
 	
 	//缩放单个图标
 	public static void generateIcon(String fileName, String targetFloat, String targetFileName, int width) throws IOException {
+		isChartPathExist(targetFloat);
 		
 		BufferedImage bufferedImage = ImageIO.read(new File(fileName));
 		int height = width;
@@ -153,6 +234,18 @@ public class ImageToIcon {
 		Graphics2D createGraphics = bi.createGraphics();
 		createGraphics.drawImage(scaledInstance, 0, 0, width, height, null);
 		ImageIO.write(bi, "png", new File(targetFloat + targetFileName));
+	}
+	/**
+	 * 创建文件夹
+	 * @param dirPath
+	 * @datetime 2019年7月29日 下午5:07:45
+	 * @author 崔富平
+	 */
+	public static void isChartPathExist(String dirPath) {
+		File file = new File(dirPath);
+		if(!file.exists()) {
+			file.mkdirs();
+		}
 	}
 
 }
