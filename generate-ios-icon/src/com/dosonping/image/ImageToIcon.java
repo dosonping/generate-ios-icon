@@ -47,11 +47,31 @@ public class ImageToIcon {
 		//hdApp
 		//generateHdAppIcon();
 		//二部OAApp
-		generateErbuOaAppIcon();
+		//generateErbuOaAppIcon();
 		//都市绿源OAApp
-		generateDslyOaAppIcon();
+		//generateDslyOaAppIcon();
+		//三站一场管理系统App
+		generateMixingplantAppIcon();
 		
 
+	}
+	/**
+	 * 三站一场管理系统App
+	 * @datetime 2019年10月18日 下午4:02:34
+	 * @author 崔富平
+	 * @throws IOException 
+	 */
+	private static void generateMixingplantAppIcon() throws IOException {
+		String rootPath = "D:\\bmrb\\三站一场管理系统App\\";
+		String fileName = rootPath + "icon.png";
+		String targetFloat = rootPath + "icon\\";
+		ImageToIcon.scaleIcons(fileName, targetFloat);
+		String targetFloatIconSet = rootPath + "icon\\iconset\\";
+		ImageToIcon.scaleIconsForAppiconset(fileName, targetFloatIconSet);
+		String targetFloatImageset = rootPath + "icon\\imageset\\";
+		ImageToIcon.scaleIconsForAppImageset(fileName, targetFloatImageset);
+		String targetFloatAppStore = rootPath + "icon\\appstoreicon\\";
+		ImageToIcon.scaleIconsForAppStore(fileName, targetFloatAppStore);
 	}
 	/**
 	 * 都市绿源OAApp
